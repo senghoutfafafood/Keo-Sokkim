@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Keo Sokeng | Seng Hout Fafa Food</title>
+    <meta name="description" content="Official contact profile for Keo Sokeng, CEO of Seng Hout Fafa Food.">
+    <meta property="og:title" content="Keo Sokeng - CEO">
+    <meta property="og:description" content="Connect with Keo Sokeng via Telegram, Line, or WhatsApp.">
+    <meta property="og:image" content="https://www.fafafood.com/_nuxt/img/logo.0c2e06a.png">
+
+    <link rel="icon" type="image/png" href="https://www.fafafood.com/_nuxt/img/logo.0c2e06a.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- General Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            /* Light corporate grey background */
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            /* Centers the app on desktop */
+        }
+
+        /* --- Main App Container --- */
+        .app-container {
+            width: 100%;
+            max-width: 480px;
+            /* Limits width on desktop to look like phone */
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        /* --- Header Section --- */
+        .header {
+            background: linear-gradient(135deg, #0099ff 0%, #0066cc 100%);
+            padding-top: 50px;
+            padding-bottom: 40px;
+            text-align: center;
+            border-bottom-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 102, 204, 0.25);
+            position: relative;
+            z-index: 10;
+        }
+
+        .avatar-container {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .avatar {
+            width: 85%;
+            /* Adjusted so logo fits nicely inside white circle */
+            height: 85%;
+            object-fit: contain;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header p {
+            font-size: 15px;
+            font-weight: 400;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* --- Content Section --- */
+        .content {
+            flex: 1;
+            padding: 40px 25px;
+            width: 100%;
+        }
+
+        /* --- Link Cards --- */
+        .link-card {
+            display: flex;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 16px 20px;
+            border-radius: 18px;
+            margin-bottom: 16px;
+            text-decoration: none;
+            color: #1a1a1a;
+            border: 1px solid #eee;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hover/Active States for Professional Feel */
+        .link-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-color: #0099ff;
+            background-color: #fff;
+        }
+
+        .link-card:active {
+            transform: scale(0.98);
+            background-color: #f0f0f0;
+        }
+
+        .icon-circle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            flex-shrink: 0;
+        }
+
+        /* Branded Icons */
+        .icon-telegram {
+            color: #229ED9;
+            background: white;
+        }
+
+        .icon-line {
+            color: #00B900;
+            background: white;
+        }
+
+        .icon-whatsapp {
+            color: #25D366;
+            background: white;
+        }
+
+        .icon-website {
+            color: #333333;
+            background: white;
+        }
+
+        .link-text {
+            font-size: 16px;
+            font-weight: 600;
+            flex-grow: 1;
+        }
+
+        .arrow-icon {
+            color: #bbb;
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .link-card:hover .arrow-icon {
+            color: #0099ff;
+            transform: translateX(3px);
+        }
+
+        /* --- Footer Section --- */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            border-top: 1px solid #eee;
+        }
+
+        .company-name {
+            font-weight: 600;
+            color: #0099ff;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #0099ff, #00c6ff);
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="app-container">
+        <header class="header">
+            <div class="avatar-container">
+                <img src="https://www.fafafood.com/_nuxt/img/logo.0c2e06a.png" alt="Seng Hout Fafa Food Logo"
+                    class="avatar">
+            </div>
+            <h1>KEO SOKKHIM</h1>
+            <p>Chief Financial Officer</p>
+        </header>
+
+        <div class="content">
+
+            <a href="https://t.me/keo_sokkhim" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="icon-circle">
+                    <i class="fa-brands fa-telegram icon-telegram"></i>
+                </div>
+                <span class="link-text">Telegram</span>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
+
+            <!-- <a href="#" class="link-card">
+                <div class="icon-circle">
+                    <i class="fa-brands fa-line icon-line"></i>
+                </div>
+                <span class="link-text">Line</span>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a> -->
+
+            <a href="https://wa.me/855979463636" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="icon-circle">
+                    <i class="fa-brands fa-whatsapp icon-whatsapp"></i>
+                </div>
+                <span class="link-text">WhatsApp</span>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
+
+            <a href="https://www.fafafood.com" class="link-card" target="_blank" rel="noopener noreferrer">
+                <div class="icon-circle">
+                    <i class="fa-solid fa-globe icon-website"></i>
+                </div>
+                <span class="link-text">Website</span>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
+        </div>
+
+        <div class="footer">
+            <span class="company-name">Seng Hout Fafa Food Co., Ltd.</span>
+            &copy; 2025 All Rights Reserved.
+        </div>
+        <div class="footer-bar"></div>
+    </div>
+
+</body>
+
+</html>
